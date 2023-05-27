@@ -145,13 +145,13 @@ function spawnClouds() {
 }
 
 function reset(){
-  gameState = PLAY;
-  gameOver.visible = false;
-  restart.visible = false;
-  
-  obstaclesGroup.destroyEach();
-  cloudsGroup.destroyEach();
-  score = 0;
+  gameState = PLAY; //troca para o estado de jogar
+  gameOver.visible = false; //sprite fica invisivel
+  restart.visible = false; //sprite fica invisivel
+  trex.changeAnimation("running", trex_running); //troca a animação para ele correndo
+  obstaclesGroup.destroyEach(); //obstaculos destruidos 1 a 1
+  cloudsGroup.destroyEach(); //nuvens destruidas 1 a 1
+  score = 0; //pontuação é zerada
 }
 
 function spawnObstacles() {
